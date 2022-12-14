@@ -1,0 +1,101 @@
+<?php $this->html( 'headelement' ); ?>
+
+<header>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<a class="navbar-brand" href="<?php $this->mainPageUrl(); ?>">
+				<img src="<?php $this->logoSrc(); ?>">
+				<h1><?php $this->siteName(); ?></h1>
+			</a>
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<form class="main-form" method="post" action="<?php $this->text( 'wgScript' ); ?>">
+						<div class="input-group">
+							<input class="form-control" type="search" name="search">
+							<span class="input-group-btn">
+								<button class="btn-primary btn form-submit">
+									<i class="fa fa-search"></i>
+								</button>
+							</span>
+						</div>
+					</form>
+				</li>
+				<?php //foreach ( $this->getNotifications() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-user"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<?php foreach ( $this->getUserMenu() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+					</ul>
+				</li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+						<i class="fa fa-bars"></i>
+					</a>
+					<ul class="dropdown-menu">
+						<?php foreach ( array_shift( $this->data['sidebar'] ) as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</header>
+
+<main>
+	<div id="content" class="container">
+
+		<?php $this->html( 'sitenotice' ); ?>
+
+		<?php echo $this->getIndicators(); ?>
+
+		<h1 id="firstHeading"><?php $this->html( 'title' ) ?></h1>
+
+		<ul id="actions">
+			<?php foreach ( $this->getActions() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+		</ul>
+
+		<?php if ( $this->data['subtitle'] ): ?>
+		<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
+		<?php endif; ?>
+
+		<?php if ( $this->data['undelete'] ): ?>
+		<div id="undelete"><?php $this->html( 'undelete' ) ?></div>
+		<?php endif; ?>
+
+		<?php if ( $this->data['newtalk'] ): ?>
+		<div class="newtalk"><?php $this->html( 'newtalk' )  ?></div>
+		<?php endif; ?>
+
+		<?php $this->html( 'bodytext' ) ?>
+
+		<div class="printfooter"><?php $this->html( 'printfooter' ); ?></div>
+
+		<?php $this->html( 'catlinks' ); ?>
+
+		<?php $this->html( 'dataAfterContent' ); ?>
+
+		<?php $this->html( 'debughtml' ); ?>
+
+	</div>
+</main>
+
+<footer class="main-footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6">
+				<ul>
+					<?php foreach ( $this->getToolbox() as $key => $value ) echo $this->makeListItem( $key, $value ); ?>
+				</ul>
+			</div>
+			<div class="col-lg-6">
+				<?php echo $this->getFooter(); ?>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<?php $this->printTrail(); ?>
+
+</body>
+</html>

@@ -1,0 +1,207 @@
+/**
+ * Logo
+ */
+.navbar-brand img {
+	height: 50px;
+}
+
+/**
+ * Echo icons
+ */
+#pt-notifications-alert,
+#pt-notifications-notice {
+	padding: 0 .7em;
+}
+#pt-notifications-alert .mw-echo-notifications-badge:before,
+#pt-notifications-notice .mw-echo-notifications-badge:before {
+	top: 1030px;
+}
+
+/**
+ * Search form
+ */
+.navbar-nav .main-form {
+	padding: 13px;
+}
+.navbar-nav input {
+	height: 46px;
+}
+
+/**
+ * Title
+ */
+#firstHeading {
+	display: inline-block;
+}
+.mw-indicator {
+	float: right;
+}
+#contentSub {
+	font-size: small;
+	margin: 1em 0;
+}
+
+/**
+ * Content
+ */
+#content {
+	padding: 2em 1em;
+}
+#content .ve-ce-documentNode {
+	padding: 0 !important;
+}
+#content h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 0.5em 0;
+}
+#content p {
+	font-size: inherit;
+}
+#content ul,
+#content ol {
+	margin: 0 0 0 2em;
+}
+#content li {
+	font-size: inherit;	
+	margin: .2em 0;
+}
+
+/**
+ * Actions
+ */
+#actions {
+	display: inline;
+	font-size: small;
+	padding: 0;
+	text-transform: lowercase;
+	white-space: nowrap;	
+}
+#actions li {
+	display: inline;
+	margin-left: 1em;
+}
+.mw-editsection {
+	font-size: small;
+}
+.mw-editsection a {
+	margin-left: 1em;
+}
+.mw-editsection-divider,
+.mw-editsection-bracket {
+	display: none;
+}
+
+/**
+ * Table of contents
+ */
+#toc {
+	background: #fff;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin-top: 1em;
+	padding: 1em;
+}
+#toc .toctoggle {
+	display: none; /* Hide it because it cannot be styled like the Edit section button */
+}
+#toc .tocnumber {
+	color: black;
+}
+#toc .toctext:hover {
+	text-decoration: underline;
+}
+#toc a:hover {
+	text-decoration: none;
+}
+#toc h2 {
+	display: inline;
+}
+#toc ul {
+	margin: 0;
+}
+#toc li {
+	list-style: none;
+}
+#filetoc {
+	display: none; /* Hide it per useless */
+}
+
+/**
+ * Thumbnails
+ */
+.thumb {
+	background: #f9f9f9;
+	border: 1px solid #ccc;
+}
+.thumb.tright {
+	margin: 0 0 10px 10px;
+}
+.thumb.tleft {
+	margin: 0 10px 10px 0;
+}
+.thumb .thumbinner {
+	padding: 10px;
+}
+.thumb .thumbcaption {
+	font-size: small;
+}
+
+/**
+ * Galleries
+ * 
+ * Galleries come with their own styling,
+ * these are overrides to make the galleries fit with the overall style of the skin
+ */
+.gallery {
+	margin: 0 !important;
+}
+.gallerytext {
+	font-size: small;
+	margin: 5px;
+	padding: 0;
+}
+.gallerytext p {
+	margin: 0;
+}
+
+/**
+ * Search results
+ */
+.searchresults {
+	margin: 1em 0;
+}
+
+/**
+ * Collapse button
+ *
+ * This button is prominent in Special:RecentChanges and Special:Watchlist
+ */
+.mw-collapsible-toggle {
+	margin-left: 1em;
+}
+.mw-collapsible-bracket {
+	display: none;
+}
+
+/**
+ * Categories
+ */
+#catlinks {
+	background: #fff;
+	border: 1px solid #ccc;
+	clear: both;
+	margin: 2em 0;
+	padding: 1em;
+}
+#catlinks ul {
+	margin: 0;
+}
+
+/**
+ * Footer
+ */
+footer .footer-icons {
+	display: none;
+}
+footer li {
+	font-size: inherit;
+}
